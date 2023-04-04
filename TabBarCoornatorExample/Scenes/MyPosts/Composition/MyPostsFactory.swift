@@ -29,4 +29,10 @@ struct MyPostsFactory: ItemTabBarFactory {
     let controller = NewPostViewController(coordinator: coordinator)
     return controller
   }
+  
+  func makePostDetailCoordinator(navigation: UINavigationController, id: Int) -> Coordinator {
+    let factory = PostDetailFactory(id: id)
+    let coordinator = PostDetailCoordinator(navigation: navigation, factory: factory)
+    return coordinator
+  }
 }

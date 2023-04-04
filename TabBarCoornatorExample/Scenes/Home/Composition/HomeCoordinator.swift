@@ -10,6 +10,7 @@ import UIKit
 final class HomeCoordinator: Coordinator {
   var navigation: UINavigationController
   private let factory: HomeFactory
+  private var postDetailCoordinator: Coordinator?
   
   init(navigation: UINavigationController, factory: HomeFactory) {
     self.navigation = navigation
@@ -28,7 +29,8 @@ final class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewControllerCoordinator {
   func didSelectPost(id: Int) {
-    //PostDetail
+    postDetailCoordinator = factory.makePostDetailCoordinator(navigation: navigation, id: id)
+    postDetailCoordinator?.start()
   }
 
 }

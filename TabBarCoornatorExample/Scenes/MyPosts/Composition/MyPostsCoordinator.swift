@@ -11,6 +11,7 @@ final class MyPostsCoordinator: Coordinator {
   var navigation: UINavigationController
   private let factory: MyPostsFactory
   private let mediator: MyPostsMediator
+  private var postDetailCoordinator: Coordinator?
   
   init(
     navigation: UINavigationController,
@@ -32,7 +33,8 @@ final class MyPostsCoordinator: Coordinator {
 
 extension MyPostsCoordinator: MyPostsViewControllerCoordinator {
   func didSelectPost(id: Int) {
-    //TODO: detail
+    postDetailCoordinator = factory.makePostDetailCoordinator(navigation: navigation, id: id)
+    postDetailCoordinator?.start()
   }
   
   func didTapAddNewPostButton() {

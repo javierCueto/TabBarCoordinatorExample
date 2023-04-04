@@ -10,6 +10,7 @@ import UIKit
 protocol HomeFactory {
   func makeHomeViewController(coordinator: HomeViewControllerCoordinator) -> UIViewController
   func makeItemTabBar(navigation: UINavigationController)
+  func makePostDetailCoordinator(navigation: UINavigationController, id: Int) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
@@ -28,6 +29,12 @@ struct HomeFactoryImp: HomeFactory {
       title: "Home",
       image: "house",
       selectedImage: "house.fill")
+  }
+  
+  func makePostDetailCoordinator(navigation: UINavigationController, id: Int) -> Coordinator {
+    let factory = PostDetailFactory(id: id)
+    let coordinator = PostDetailCoordinator(navigation: navigation, factory: factory)
+    return coordinator
   }
 }
 
