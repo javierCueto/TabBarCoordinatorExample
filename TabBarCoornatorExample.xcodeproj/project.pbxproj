@@ -43,6 +43,9 @@
 		4592915F29DBE62B00D308DC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915E29DBE62A00D308DC /* NewPostViewController.swift */; };
 		4592916129DBE90900D308DC /* MyPostsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916029DBE90900D308DC /* MyPostsCoordinator.swift */; };
 		4592916329DBEA6F00D308DC /* MyPostsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916229DBEA6F00D308DC /* MyPostsMediator.swift */; };
+		4592916829DBEF2200D308DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916729DBEF2200D308DC /* HomeViewController.swift */; };
+		4592916A29DBEF9B00D308DC /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916929DBEF9B00D308DC /* HomeCoordinator.swift */; };
+		4592916C29DBEFD500D308DC /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916B29DBEFD500D308DC /* HomeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		4592915E29DBE62A00D308DC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		4592916029DBE90900D308DC /* MyPostsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsCoordinator.swift; sourceTree = "<group>"; };
 		4592916229DBEA6F00D308DC /* MyPostsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsMediator.swift; sourceTree = "<group>"; };
+		4592916729DBEF2200D308DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4592916929DBEF9B00D308DC /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		4592916B29DBEFD500D308DC /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 		4592910C29DB952100D308DC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4592916429DBEF0400D308DC /* Home */,
 				4592915D29DBE61A00D308DC /* NewPost */,
 				4592915629DBE27300D308DC /* MyPosts */,
 				4592914D29DBDD3D00D308DC /* Communities */,
@@ -440,6 +447,32 @@
 			path = NewPost;
 			sourceTree = "<group>";
 		};
+		4592916429DBEF0400D308DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4592916629DBEF1300D308DC /* Presentation */,
+				4592916529DBEF0D00D308DC /* Composition */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4592916529DBEF0D00D308DC /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				4592916929DBEF9B00D308DC /* HomeCoordinator.swift */,
+				4592916B29DBEFD500D308DC /* HomeFactory.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		4592916629DBEF1300D308DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4592916729DBEF2200D308DC /* HomeViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -579,6 +612,7 @@
 				4592912429DB9C2100D308DC /* LogInViewController.swift in Sources */,
 				4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */,
 				4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */,
+				4592916C29DBEFD500D308DC /* HomeFactory.swift in Sources */,
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
 				4592915C29DBE5EF00D308DC /* MyPostsFactory.swift in Sources */,
 				4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */,
@@ -597,10 +631,12 @@
 				4592915A29DBE2A200D308DC /* MyPostsViewController.swift in Sources */,
 				4592913729DBB0C900D308DC /* ItemSettingsViewModel.swift in Sources */,
 				4592913929DBB0E600D308DC /* SetingsViewNavigation.swift in Sources */,
+				4592916829DBEF2200D308DC /* HomeViewController.swift in Sources */,
 				4592914C29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift in Sources */,
 				4592911A29DB965700D308DC /* Auth.swift in Sources */,
 				4592915129DBDD6700D308DC /* CommunitiesViewController.swift in Sources */,
 				4592913F29DBB18200D308DC /* SettingsViewController.swift in Sources */,
+				4592916A29DBEF9B00D308DC /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
