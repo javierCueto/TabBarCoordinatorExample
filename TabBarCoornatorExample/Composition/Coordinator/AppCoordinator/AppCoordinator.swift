@@ -10,6 +10,7 @@ import UIKit
 final class AppCoordinator: Coordinator {
   var navigation: UINavigationController
   private var loginCoordinator: Coordinator?
+  private var mainTabBarCoordinator: Coordinator?
   var window: UIWindow?
   var factory: AppFactory?
   var auth: SessionCheckerAuth?
@@ -33,21 +34,35 @@ final class AppCoordinator: Coordinator {
   
   private func startSomeCoordinator() {
     guard let auth = auth else { return }
-    if auth.isSessionActive {
-      print("open tabbar")
-    } else {
-      loginCoordinator = factory?.makeLogInCoordinator(navigation: navigation, delegate: self)
-      loginCoordinator?.start()
-    }
-
+    auth.isSessionActive ? startMainTabBarCoordinator() : startLoginCoordinator()
+  }
+  
+  private func startLoginCoordinator() {
+    loginCoordinator = factory?.makeLogInCoordinator(navigation: navigation, delegate: self)
+    loginCoordinator?.start()
+  }
+  
+  private func startMainTabBarCoordinator() {
+    mainTabBarCoordinator = factory?.makeMainTabBarCoordinator(
+      navigation: navigation,
+      delegate: self)
+    mainTabBarCoordinator?.start()
   }
   
 }
 
 extension AppCoordinator: LogInCoordinatorDelegate {
   func didFinishLogin() {
-    startSomeCoordinator()
     navigation.viewControllers = []
     loginCoordinator = nil
+    startSomeCoordinator()
+  }
+}
+
+extension AppCoordinator: MainTabBarCoordinatorDelegate {
+  func didFinish() {
+    navigation.viewControllers = []
+    mainTabBarCoordinator = nil
+    startSomeCoordinator()
   }
 }

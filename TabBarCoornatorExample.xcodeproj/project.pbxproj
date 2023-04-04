@@ -23,6 +23,16 @@
 		4592912429DB9C2100D308DC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592912329DB9C2100D308DC /* LogInViewController.swift */; };
 		4592912629DB9C6200D308DC /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592912529DB9C6200D308DC /* LogInCoordinator.swift */; };
 		4592912929DB9D4200D308DC /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592912829DB9D4200D308DC /* LogInViewModel.swift */; };
+		4592912E29DBAB3D00D308DC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592912D29DBAB3D00D308DC /* MainTabBarController.swift */; };
+		4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592912F29DBAB7000D308DC /* MainTabBarFactory.swift */; };
+		4592913229DBAC1B00D308DC /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592913129DBAC1B00D308DC /* MainTabBarCoordinator.swift */; };
+		4592913729DBB0C900D308DC /* ItemSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592913629DBB0C900D308DC /* ItemSettingsViewModel.swift */; };
+		4592913929DBB0E600D308DC /* SetingsViewNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592913829DBB0E600D308DC /* SetingsViewNavigation.swift */; };
+		4592913B29DBB16200D308DC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592913A29DBB16200D308DC /* SettingsViewModel.swift */; };
+		4592913F29DBB18200D308DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592913E29DBB18200D308DC /* SettingsViewController.swift */; };
+		4592914329DBB57700D308DC /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914229DBB57700D308DC /* SettingsCoordinator.swift */; };
+		4592914529DBB58200D308DC /* SettingsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914429DBB58200D308DC /* SettingsFactory.swift */; };
+		4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,16 @@
 		4592912329DB9C2100D308DC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4592912529DB9C6200D308DC /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
 		4592912829DB9D4200D308DC /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		4592912D29DBAB3D00D308DC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4592912F29DBAB7000D308DC /* MainTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarFactory.swift; sourceTree = "<group>"; };
+		4592913129DBAC1B00D308DC /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		4592913629DBB0C900D308DC /* ItemSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSettingsViewModel.swift; sourceTree = "<group>"; };
+		4592913829DBB0E600D308DC /* SetingsViewNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetingsViewNavigation.swift; sourceTree = "<group>"; };
+		4592913A29DBB16200D308DC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4592913E29DBB18200D308DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4592914229DBB57700D308DC /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		4592914429DBB58200D308DC /* SettingsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFactory.swift; sourceTree = "<group>"; };
+		4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTabBarFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +133,9 @@
 		459290D929DB94B600D308DC /* TabBarCoornatorExample */ = {
 			isa = PBXGroup;
 			children = (
-				4592910C29DB952100D308DC /* Scenes */,
-				4592910B29DB951800D308DC /* Composition */,
 				4592910A29DB951100D308DC /* Auth */,
+				4592910B29DB951800D308DC /* Composition */,
+				4592910C29DB952100D308DC /* Scenes */,
 				459290E329DB94B700D308DC /* Assets.xcassets */,
 				459290E829DB94B700D308DC /* Info.plist */,
 			);
@@ -160,6 +180,8 @@
 		4592910C29DB952100D308DC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4592913329DBB0AC00D308DC /* Settings */,
+				4592912A29DBAB1600D308DC /* MainTabBar */,
 				4592911E29DB9B8B00D308DC /* LogIn */,
 				4592910E29DB954400D308DC /* LaunchScreen */,
 			);
@@ -250,6 +272,78 @@
 				4592912829DB9D4200D308DC /* LogInViewModel.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4592912A29DBAB1600D308DC /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4592912C29DBAB2500D308DC /* Presentation */,
+				4592912B29DBAB1F00D308DC /* Composition */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		4592912B29DBAB1F00D308DC /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				4592912F29DBAB7000D308DC /* MainTabBarFactory.swift */,
+				4592913129DBAC1B00D308DC /* MainTabBarCoordinator.swift */,
+				4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		4592912C29DBAB2500D308DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4592912D29DBAB3D00D308DC /* MainTabBarController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4592913329DBB0AC00D308DC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4592913529DBB0B600D308DC /* Presentation */,
+				4592913429DBB0B100D308DC /* Composition */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4592913429DBB0B100D308DC /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				4592914229DBB57700D308DC /* SettingsCoordinator.swift */,
+				4592914429DBB58200D308DC /* SettingsFactory.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		4592913529DBB0B600D308DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4592913D29DBB17100D308DC /* Controller */,
+				4592913C29DBB16600D308DC /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4592913C29DBB16600D308DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4592913629DBB0C900D308DC /* ItemSettingsViewModel.swift */,
+				4592913829DBB0E600D308DC /* SetingsViewNavigation.swift */,
+				4592913A29DBB16200D308DC /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4592913D29DBB17100D308DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4592913E29DBB18200D308DC /* SettingsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,16 +477,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4592911D29DB972900D308DC /* AppDIContainer.swift in Sources */,
+				4592914529DBB58200D308DC /* SettingsFactory.swift in Sources */,
 				4592911429DB95B400D308DC /* AppCoordinator.swift in Sources */,
+				4592912E29DBAB3D00D308DC /* MainTabBarController.swift in Sources */,
 				4592912929DB9D4200D308DC /* LogInViewModel.swift in Sources */,
 				4592912629DB9C6200D308DC /* LogInCoordinator.swift in Sources */,
 				4592912429DB9C2100D308DC /* LogInViewController.swift in Sources */,
+				4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */,
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
+				4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */,
+				4592913B29DBB16200D308DC /* SettingsViewModel.swift in Sources */,
 				459290DD29DB94B600D308DC /* SceneDelegate.swift in Sources */,
+				4592913229DBAC1B00D308DC /* MainTabBarCoordinator.swift in Sources */,
 				4592911229DB958600D308DC /* Coordinator.swift in Sources */,
+				4592914329DBB57700D308DC /* SettingsCoordinator.swift in Sources */,
 				4592911829DB963500D308DC /* AppFactory.swift in Sources */,
 				4592912129DB9BB700D308DC /* LogInFactory.swift in Sources */,
+				4592913729DBB0C900D308DC /* ItemSettingsViewModel.swift in Sources */,
+				4592913929DBB0E600D308DC /* SetingsViewNavigation.swift in Sources */,
 				4592911A29DB965700D308DC /* Auth.swift in Sources */,
+				4592913F29DBB18200D308DC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
