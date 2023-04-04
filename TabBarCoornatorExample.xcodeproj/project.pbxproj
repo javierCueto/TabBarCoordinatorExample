@@ -35,6 +35,9 @@
 		4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */; };
 		4592914A29DBDB7600D308DC /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914929DBDB7600D308DC /* ExampleViewController.swift */; };
 		4592914C29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914B29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift */; };
+		4592915129DBDD6700D308DC /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915029DBDD6700D308DC /* CommunitiesViewController.swift */; };
+		4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915229DBDD9600D308DC /* CommunitiesFactory.swift */; };
+		4592915529DBDE4800D308DC /* CommunitiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915429DBDE4800D308DC /* CommunitiesCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTabBarFactory.swift; sourceTree = "<group>"; };
 		4592914929DBDB7600D308DC /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		4592914B29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift"; sourceTree = "<group>"; };
+		4592915029DBDD6700D308DC /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
+		4592915229DBDD9600D308DC /* CommunitiesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesFactory.swift; sourceTree = "<group>"; };
+		4592915429DBDE4800D308DC /* CommunitiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,7 @@
 		4592910C29DB952100D308DC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4592914D29DBDD3D00D308DC /* Communities */,
 				4592914829DBDB5B00D308DC /* Example */,
 				4592913329DBB0AC00D308DC /* Settings */,
 				4592912A29DBAB1600D308DC /* MainTabBar */,
@@ -360,6 +367,32 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		4592914D29DBDD3D00D308DC /* Communities */ = {
+			isa = PBXGroup;
+			children = (
+				4592914F29DBDD4B00D308DC /* Presentation */,
+				4592914E29DBDD4500D308DC /* Composition */,
+			);
+			path = Communities;
+			sourceTree = "<group>";
+		};
+		4592914E29DBDD4500D308DC /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				4592915229DBDD9600D308DC /* CommunitiesFactory.swift */,
+				4592915429DBDE4800D308DC /* CommunitiesCoordinator.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		4592914F29DBDD4B00D308DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4592915029DBDD6700D308DC /* CommunitiesViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +531,7 @@
 				4592912629DB9C6200D308DC /* LogInCoordinator.swift in Sources */,
 				4592912429DB9C2100D308DC /* LogInViewController.swift in Sources */,
 				4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */,
+				4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */,
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
 				4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */,
 				4592913B29DBB16200D308DC /* SettingsViewModel.swift in Sources */,
@@ -507,11 +541,13 @@
 				4592911229DB958600D308DC /* Coordinator.swift in Sources */,
 				4592914329DBB57700D308DC /* SettingsCoordinator.swift in Sources */,
 				4592911829DB963500D308DC /* AppFactory.swift in Sources */,
+				4592915529DBDE4800D308DC /* CommunitiesCoordinator.swift in Sources */,
 				4592912129DB9BB700D308DC /* LogInFactory.swift in Sources */,
 				4592913729DBB0C900D308DC /* ItemSettingsViewModel.swift in Sources */,
 				4592913929DBB0E600D308DC /* SetingsViewNavigation.swift in Sources */,
 				4592914C29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift in Sources */,
 				4592911A29DB965700D308DC /* Auth.swift in Sources */,
+				4592915129DBDD6700D308DC /* CommunitiesViewController.swift in Sources */,
 				4592913F29DBB18200D308DC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,7 @@ final class MainTabBarCoordinator: Coordinator {
   var navigation: UINavigationController
   private let factory: MainTabBarFactory
   private weak var delegate: MainTabBarCoordinatorDelegate?
-  var settingsCoordinator: Coordinator?
+  var childCoordinators: [Coordinator] = []
   
   init(
     navigation: UINavigationController,
@@ -31,15 +31,18 @@ final class MainTabBarCoordinator: Coordinator {
     let navigationTabBar =  factory.makeMainTabBarController()
     navigation.pushViewController(navigationTabBar, animated: false)
     navigation.navigationBar.isHidden = true
-    settingsCoordinator = factory.makeSettingsCoordinator(delegate: self)
-    guard let settingsCoordinator = settingsCoordinator else { return }
-    navigationTabBar.viewControllers = [settingsCoordinator.navigation]
-    settingsCoordinator.start()
+    
+    childCoordinators = factory.makeChildCoordinators(delegate: self)
+    let childNavigation = childCoordinators.map { $0.navigation }
+    childCoordinators.forEach { $0.start() }
+    navigationTabBar.viewControllers = childNavigation
+
   }
 }
 
 extension MainTabBarCoordinator: SettingsCoordinatorDelegate {
   func didTapLogOut() {
+    childCoordinators = []
     delegate?.didFinish()
   }
 }
