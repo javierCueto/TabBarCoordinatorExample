@@ -19,8 +19,9 @@ struct MainTabBarFactory {
   func makeChildCoordinators(delegate: SettingsCoordinatorDelegate) -> [Coordinator] {
     let settingsCoordinator = makeSettingsCoordinator(delegate: delegate)
     let communitiesCoordinator = makeCommunitiesCoordinator()
+    let myPostCoordinator = makeMyPostCoordinator()
     
-    return [communitiesCoordinator, settingsCoordinator]
+    return [myPostCoordinator, communitiesCoordinator, settingsCoordinator]
   }
   
   private func makeSettingsCoordinator(delegate: SettingsCoordinatorDelegate) -> Coordinator {
@@ -33,6 +34,13 @@ struct MainTabBarFactory {
     let factory = CommunitiesFactoryImp()
     let navigation = UINavigationController()
     return CommunitiesCoordinator(navigation: navigation, factory: factory)
+  }
+  
+  private func makeMyPostCoordinator() -> Coordinator {
+    let factory = MyPostsFactory()
+    let mediator = MyPostsMediatorImp()
+    let navigation = UINavigationController()
+    return MyPostsCoordinator(navigation: navigation, factory: factory, mediator: mediator)
   }
   
 

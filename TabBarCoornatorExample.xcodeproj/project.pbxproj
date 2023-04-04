@@ -38,6 +38,11 @@
 		4592915129DBDD6700D308DC /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915029DBDD6700D308DC /* CommunitiesViewController.swift */; };
 		4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915229DBDD9600D308DC /* CommunitiesFactory.swift */; };
 		4592915529DBDE4800D308DC /* CommunitiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915429DBDE4800D308DC /* CommunitiesCoordinator.swift */; };
+		4592915A29DBE2A200D308DC /* MyPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915929DBE2A200D308DC /* MyPostsViewController.swift */; };
+		4592915C29DBE5EF00D308DC /* MyPostsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915B29DBE5EF00D308DC /* MyPostsFactory.swift */; };
+		4592915F29DBE62B00D308DC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592915E29DBE62A00D308DC /* NewPostViewController.swift */; };
+		4592916129DBE90900D308DC /* MyPostsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916029DBE90900D308DC /* MyPostsCoordinator.swift */; };
+		4592916329DBEA6F00D308DC /* MyPostsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592916229DBEA6F00D308DC /* MyPostsMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		4592915029DBDD6700D308DC /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
 		4592915229DBDD9600D308DC /* CommunitiesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesFactory.swift; sourceTree = "<group>"; };
 		4592915429DBDE4800D308DC /* CommunitiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesCoordinator.swift; sourceTree = "<group>"; };
+		4592915929DBE2A200D308DC /* MyPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsViewController.swift; sourceTree = "<group>"; };
+		4592915B29DBE5EF00D308DC /* MyPostsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsFactory.swift; sourceTree = "<group>"; };
+		4592915E29DBE62A00D308DC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		4592916029DBE90900D308DC /* MyPostsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsCoordinator.swift; sourceTree = "<group>"; };
+		4592916229DBEA6F00D308DC /* MyPostsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsMediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +200,8 @@
 		4592910C29DB952100D308DC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4592915D29DBE61A00D308DC /* NewPost */,
+				4592915629DBE27300D308DC /* MyPosts */,
 				4592914D29DBDD3D00D308DC /* Communities */,
 				4592914829DBDB5B00D308DC /* Example */,
 				4592913329DBB0AC00D308DC /* Settings */,
@@ -393,6 +405,41 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		4592915629DBE27300D308DC /* MyPosts */ = {
+			isa = PBXGroup;
+			children = (
+				4592915829DBE28600D308DC /* Composition */,
+				4592915729DBE27E00D308DC /* Presentation */,
+			);
+			path = MyPosts;
+			sourceTree = "<group>";
+		};
+		4592915729DBE27E00D308DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4592915929DBE2A200D308DC /* MyPostsViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4592915829DBE28600D308DC /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				4592915B29DBE5EF00D308DC /* MyPostsFactory.swift */,
+				4592916029DBE90900D308DC /* MyPostsCoordinator.swift */,
+				4592916229DBEA6F00D308DC /* MyPostsMediator.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		4592915D29DBE61A00D308DC /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+				4592915E29DBE62A00D308DC /* NewPostViewController.swift */,
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -533,9 +580,13 @@
 				4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */,
 				4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */,
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
+				4592915C29DBE5EF00D308DC /* MyPostsFactory.swift in Sources */,
 				4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */,
+				4592915F29DBE62B00D308DC /* NewPostViewController.swift in Sources */,
 				4592913B29DBB16200D308DC /* SettingsViewModel.swift in Sources */,
+				4592916129DBE90900D308DC /* MyPostsCoordinator.swift in Sources */,
 				4592914A29DBDB7600D308DC /* ExampleViewController.swift in Sources */,
+				4592916329DBEA6F00D308DC /* MyPostsMediator.swift in Sources */,
 				459290DD29DB94B600D308DC /* SceneDelegate.swift in Sources */,
 				4592913229DBAC1B00D308DC /* MainTabBarCoordinator.swift in Sources */,
 				4592911229DB958600D308DC /* Coordinator.swift in Sources */,
@@ -543,6 +594,7 @@
 				4592911829DB963500D308DC /* AppFactory.swift in Sources */,
 				4592915529DBDE4800D308DC /* CommunitiesCoordinator.swift in Sources */,
 				4592912129DB9BB700D308DC /* LogInFactory.swift in Sources */,
+				4592915A29DBE2A200D308DC /* MyPostsViewController.swift in Sources */,
 				4592913729DBB0C900D308DC /* ItemSettingsViewModel.swift in Sources */,
 				4592913929DBB0E600D308DC /* SetingsViewNavigation.swift in Sources */,
 				4592914C29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift in Sources */,
