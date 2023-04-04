@@ -14,8 +14,8 @@ protocol SettingsCoordinatorDelegate: AnyObject {
 
 final class SettingsCoordinator: Coordinator {
   var navigation: UINavigationController
-  private var factory: SettingsFactory
-  private weak var delegate: SettingsCoordinatorDelegate?
+  var factory: SettingsFactory
+  weak var delegate: SettingsCoordinatorDelegate?
   
   init(
     navigation: UINavigationController,
@@ -35,19 +35,4 @@ final class SettingsCoordinator: Coordinator {
   }
 }
 
-extension SettingsCoordinator: SettingsViewControllerCoordinator {
-  func didSelectCell(settingsViewNavigation: SetingsViewNavigation) {
-    switch settingsViewNavigation {
-    case .userConfiguration:
-      break
-    case .account:
-      break
-    case .theme:
-      break
-    case .logout:
-      delegate?.didTapLogOut()
-    case .noNavigation:
-      break
-    }
-  }
-}
+

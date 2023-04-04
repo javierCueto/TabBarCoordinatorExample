@@ -33,6 +33,8 @@
 		4592914329DBB57700D308DC /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914229DBB57700D308DC /* SettingsCoordinator.swift */; };
 		4592914529DBB58200D308DC /* SettingsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914429DBB58200D308DC /* SettingsFactory.swift */; };
 		4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */; };
+		4592914A29DBDB7600D308DC /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914929DBDB7600D308DC /* ExampleViewController.swift */; };
+		4592914C29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592914B29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		4592914229DBB57700D308DC /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		4592914429DBB58200D308DC /* SettingsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFactory.swift; sourceTree = "<group>"; };
 		4592914629DBBAB500D308DC /* ItemTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTabBarFactory.swift; sourceTree = "<group>"; };
+		4592914929DBDB7600D308DC /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		4592914B29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		4592910C29DB952100D308DC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4592914829DBDB5B00D308DC /* Example */,
 				4592913329DBB0AC00D308DC /* Settings */,
 				4592912A29DBAB1600D308DC /* MainTabBar */,
 				4592911E29DB9B8B00D308DC /* LogIn */,
@@ -315,6 +320,7 @@
 			children = (
 				4592914229DBB57700D308DC /* SettingsCoordinator.swift */,
 				4592914429DBB58200D308DC /* SettingsFactory.swift */,
+				4592914B29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift */,
 			);
 			path = Composition;
 			sourceTree = "<group>";
@@ -344,6 +350,14 @@
 				4592913E29DBB18200D308DC /* SettingsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4592914829DBDB5B00D308DC /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				4592914929DBDB7600D308DC /* ExampleViewController.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +501,7 @@
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
 				4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */,
 				4592913B29DBB16200D308DC /* SettingsViewModel.swift in Sources */,
+				4592914A29DBDB7600D308DC /* ExampleViewController.swift in Sources */,
 				459290DD29DB94B600D308DC /* SceneDelegate.swift in Sources */,
 				4592913229DBAC1B00D308DC /* MainTabBarCoordinator.swift in Sources */,
 				4592911229DB958600D308DC /* Coordinator.swift in Sources */,
@@ -495,6 +510,7 @@
 				4592912129DB9BB700D308DC /* LogInFactory.swift in Sources */,
 				4592913729DBB0C900D308DC /* ItemSettingsViewModel.swift in Sources */,
 				4592913929DBB0E600D308DC /* SetingsViewNavigation.swift in Sources */,
+				4592914C29DBDBA400D308DC /* SettingsCoordinatror+SettingsCoordinatrorViewCoordinator.swift in Sources */,
 				4592911A29DB965700D308DC /* Auth.swift in Sources */,
 				4592913F29DBB18200D308DC /* SettingsViewController.swift in Sources */,
 			);
