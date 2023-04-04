@@ -49,6 +49,8 @@
 		4592917129DBF3A000D308DC /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592917029DBF3A000D308DC /* PostDetailController.swift */; };
 		4592917329DBF59200D308DC /* PostDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592917229DBF59200D308DC /* PostDetailFactory.swift */; };
 		4592917529DBF68000D308DC /* PostDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592917429DBF68000D308DC /* PostDetailCoordinator.swift */; };
+		4592917729DBFA5700D308DC /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592917629DBFA5700D308DC /* Navigation.swift */; };
+		4592917929DC001700D308DC /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592917829DC001700D308DC /* ParentCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		4592917029DBF3A000D308DC /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
 		4592917229DBF59200D308DC /* PostDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailFactory.swift; sourceTree = "<group>"; };
 		4592917429DBF68000D308DC /* PostDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCoordinator.swift; sourceTree = "<group>"; };
+		4592917629DBFA5700D308DC /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		4592917829DC001700D308DC /* ParentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,8 @@
 			children = (
 				4592911029DB956100D308DC /* AppCoordinator */,
 				4592911129DB958600D308DC /* Coordinator.swift */,
+				4592917629DBFA5700D308DC /* Navigation.swift */,
+				4592917829DC001700D308DC /* ParentCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				4592912629DB9C6200D308DC /* LogInCoordinator.swift in Sources */,
 				4592912429DB9C2100D308DC /* LogInViewController.swift in Sources */,
 				4592914729DBBAB500D308DC /* ItemTabBarFactory.swift in Sources */,
+				4592917729DBFA5700D308DC /* Navigation.swift in Sources */,
 				4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */,
 				4592916C29DBEFD500D308DC /* HomeFactory.swift in Sources */,
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
@@ -662,6 +669,7 @@
 				4592914329DBB57700D308DC /* SettingsCoordinator.swift in Sources */,
 				4592911829DB963500D308DC /* AppFactory.swift in Sources */,
 				4592915529DBDE4800D308DC /* CommunitiesCoordinator.swift in Sources */,
+				4592917929DC001700D308DC /* ParentCoordinator.swift in Sources */,
 				4592912129DB9BB700D308DC /* LogInFactory.swift in Sources */,
 				4592915A29DBE2A200D308DC /* MyPostsViewController.swift in Sources */,
 				4592917129DBF3A000D308DC /* PostDetailController.swift in Sources */,

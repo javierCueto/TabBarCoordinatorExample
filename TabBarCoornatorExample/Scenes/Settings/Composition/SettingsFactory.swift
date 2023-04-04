@@ -17,7 +17,7 @@ struct SettingsFactory: ItemTabBarFactory {
     return controller
   }
   
-  func makeTabBarItem(navigation: UINavigationController) {
+  func makeTabBarItem(navigation: Navigation) {
     makeItemTabBar(navigation: navigation, title: "Setting", image: "gearshape.2", selectedImage: "gearshape.2.fill")
   }
   

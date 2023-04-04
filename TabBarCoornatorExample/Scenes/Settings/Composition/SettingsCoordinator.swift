@@ -13,12 +13,12 @@ protocol SettingsCoordinatorDelegate: AnyObject {
 
 
 final class SettingsCoordinator: Coordinator {
-  var navigation: UINavigationController
+  var navigation: Navigation
   var factory: SettingsFactory
   weak var delegate: SettingsCoordinatorDelegate?
   
   init(
-    navigation: UINavigationController,
+    navigation: Navigation,
     factory: SettingsFactory,
     delegate: SettingsCoordinatorDelegate
   ) {

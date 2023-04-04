@@ -21,7 +21,7 @@ struct MyPostsFactory: ItemTabBarFactory {
     return controller
   }
   
-  func makeItemTabBar(navigation: UINavigationController) {
+  func makeItemTabBar(navigation: Navigation) {
     makeItemTabBar(navigation: navigation, title: "My Posts", image: "list.bullet.rectangle.portrait", selectedImage: "list.bullet.rectangle.portrait.fill")
   }
   
@@ -30,9 +30,9 @@ struct MyPostsFactory: ItemTabBarFactory {
     return controller
   }
   
-  func makePostDetailCoordinator(navigation: UINavigationController, id: Int) -> Coordinator {
+  func makePostDetailCoordinator(navigation: Navigation, id: Int, parentCoordinator: ParentCoordinator) -> Coordinator {
     let factory = PostDetailFactory(id: id)
-    let coordinator = PostDetailCoordinator(navigation: navigation, factory: factory)
+    let coordinator = PostDetailCoordinator(navigation: navigation, factory: factory, parentCoordinator: parentCoordinator)
     return coordinator
   }
 }

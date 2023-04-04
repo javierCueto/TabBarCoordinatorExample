@@ -12,7 +12,6 @@ struct MainTabBarFactory {
   
   func makeMainTabBarController() -> UITabBarController {
     let mainTabBarController = MainTabBarController()
-    //mainTabBarController.viewControllers = []
     return mainTabBarController
   }
   
@@ -27,26 +26,26 @@ struct MainTabBarFactory {
   
   private func makeSettingsCoordinator(delegate: SettingsCoordinatorDelegate) -> Coordinator {
     let factory = SettingsFactory(appDIContainer: appDIContainer)
-    let navigation = UINavigationController()
+    let navigation = NavigationImp(rootViewController: UINavigationController())
     return SettingsCoordinator(navigation: navigation, factory: factory, delegate: delegate)
   }
   
   private func makeCommunitiesCoordinator() -> Coordinator {
     let factory = CommunitiesFactoryImp()
-    let navigation = UINavigationController()
+    let navigation = NavigationImp(rootViewController: UINavigationController())
     return CommunitiesCoordinator(navigation: navigation, factory: factory)
   }
   
   private func makeMyPostCoordinator() -> Coordinator {
     let factory = MyPostsFactory()
     let mediator = MyPostsMediatorImp()
-    let navigation = UINavigationController()
+    let navigation = NavigationImp(rootViewController: UINavigationController())
     return MyPostsCoordinator(navigation: navigation, factory: factory, mediator: mediator)
   }
 
   private func makeHomeCoordinator() -> Coordinator {
     let factory = HomeFactoryImp()
-    let navigation = UINavigationController()
+    let navigation = NavigationImp(rootViewController: UINavigationController())
     return HomeCoordinator(navigation: navigation, factory: factory)
   }
 }
