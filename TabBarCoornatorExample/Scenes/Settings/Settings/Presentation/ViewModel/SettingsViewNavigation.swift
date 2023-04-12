@@ -1,11 +1,11 @@
 //
-//  SetingsViewNavigation.swift
+//  SettingsViewNavigation.swift
 //  TabBarCoornatorExample
 //
 //  Created by Javier Cueto on 03/04/23.
 //
 
-enum SetingsViewNavigation: String {
+enum SettingsViewNavigation: String {
   case userConfiguration
   case account
   case theme

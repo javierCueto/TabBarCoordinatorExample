@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SettingsViewControllerCoordinator: AnyObject {
-  func didSelectCell(settingsViewNavigation: SetingsViewNavigation)
+  func didSelectCell(settingsViewNavigation: SettingsViewNavigation)
 }
 
 final class SettingsViewController: UITableViewController {

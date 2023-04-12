@@ -16,6 +16,7 @@ final class SettingsCoordinator: Coordinator {
   var navigation: Navigation
   var factory: SettingsFactory
   weak var delegate: SettingsCoordinatorDelegate?
+  var userConfigurationCoordinator: Coordinator?
   
   init(
     navigation: Navigation,

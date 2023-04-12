@@ -52,7 +52,7 @@ final class SettingsViewModel {
     itemsSettingsViewModel[row]
   }
   
-  func cellSelected(row: Int) -> SetingsViewNavigation {
+  func cellSelected(row: Int) -> SettingsViewNavigation {
     let navigation = itemsSettingsViewModel[row].navigation
     if navigation == .logout {
       logOut()

@@ -32,4 +32,15 @@ struct SettingsFactory: ItemTabBarFactory {
     controller.title = "Theme"
     return controller
   }
+  
+  func makeUserConfigurationCoordinator(delegate: UserConfigurationCoordinatorDelegate) -> Coordinator {
+    let factory = UserConfigurationFactory()
+    let navigationController = UINavigationController()
+    //navigationController.modalPresentationStyle = .fullScreen
+    let navigation = NavigationImp(rootViewController: navigationController)
+    return UserConfigurationCoordinator(
+      navigation: navigation,
+      factory: factory,
+      delegate: delegate)
+  }
 }
