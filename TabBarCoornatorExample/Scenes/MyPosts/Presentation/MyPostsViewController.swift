@@ -13,6 +13,7 @@ protocol MyPostsViewControllerCoordinator: AnyObject {
   func didTapAddNewPostButton()
 }
 
+//TODO: - Use a VM and constant file
 final class MyPostsViewController: UICollectionViewController {
   // MARK: - Public properties
   

@@ -6,7 +6,7 @@
 //
 
 protocol UserConfigurationCoordinatorDelegate: AnyObject {
-  func didFinish()
+  func didFinish(childCoordinator: Coordinator)
 }
 
 final class UserConfigurationCoordinator: Coordinator {
@@ -30,9 +30,10 @@ final class UserConfigurationCoordinator: Coordinator {
   }
 }
 
+//TODO: - Move to another file
 extension UserConfigurationCoordinator: UserConfigurationViewControllerCoordinator {
   func didFinishFlow() {
-    delegate?.didFinish()
+    delegate?.didFinish(childCoordinator: self)
   }
   
   func didSelectAvatarButton() {

@@ -63,5 +63,3 @@ final class UserConfigurationViewController: UIViewController {
     }
   }
 }
-
-// MARK: - Extensions here

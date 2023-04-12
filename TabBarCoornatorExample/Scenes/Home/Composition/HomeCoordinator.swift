@@ -27,12 +27,12 @@ final class HomeCoordinator: Coordinator {
   
 }
 
+//TODO: - Move to another file
 extension HomeCoordinator: HomeViewControllerCoordinator {
   func didSelectPost(id: Int) {
     let postDetailCoordinator = factory.makePostDetailCoordinator(navigation: navigation, id: id, parentCoordinator: self)
    addChildCoordinatorStar(postDetailCoordinator)
   }
-
 }
 
 extension HomeCoordinator: ParentCoordinator { }

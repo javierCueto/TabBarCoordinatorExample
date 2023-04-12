@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: - Use a protocol instead a concrete type
 struct PostDetailFactory {
   private(set) var id: Int
   
@@ -37,6 +38,4 @@ struct PostDetailFactory {
     let navigation = UINavigationController(rootViewController: controller)
     return navigation
   }
-  
-  
 }

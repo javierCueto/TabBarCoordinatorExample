@@ -12,6 +12,7 @@ protocol CommunitiesFactory {
   func makeItemTabBar(navigation: Navigation)
 }
 
+//TODO: - Use constant file
 struct CommunitiesFactoryImp: CommunitiesFactory {
   func makeMyCommunitiesViewController() -> UIViewController {
     let controller = CommunitiesViewController()

@@ -29,6 +29,7 @@ final class PostDetailCoordinator: Coordinator {
   
 }
 
+//TODO: - Move to another file
 extension PostDetailCoordinator: PostDetailControllerCoordinator {
   func didTapPhotosButton() {
     navigation.present(factory.makePhotosViewController(), animated: true)
@@ -41,5 +42,4 @@ extension PostDetailCoordinator: PostDetailControllerCoordinator {
   func didTapSourceButton() {
     navigation.present(factory.makeSourceViewController(), animated: true)
   }
-  
 }

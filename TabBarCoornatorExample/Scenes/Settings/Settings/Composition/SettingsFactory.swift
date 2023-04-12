@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: - Use a protocol instead a concrete type and constant file
 struct SettingsFactory: ItemTabBarFactory {
   let appDIContainer: AppDIContainer?
   

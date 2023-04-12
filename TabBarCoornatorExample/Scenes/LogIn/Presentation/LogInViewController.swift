@@ -13,10 +13,10 @@ protocol LogInViewControllerCoordinator: AnyObject {
 }
 
 final class LogInViewController: UIViewController {
-  // MARK: - Public properties
-  
+
   // MARK: - Private properties
   private weak var coordinator: LogInViewControllerCoordinator?
+  //TODO: - Use the VM protocol
   private let viewModel: LogInViewModel
   
   private let loginButton: UIButton = {
@@ -64,5 +64,3 @@ final class LogInViewController: UIViewController {
     loginButton.addAction(loginAction, for: .touchUpInside)
   }
 }
-
-// MARK: - Extensions here

@@ -54,6 +54,10 @@
 		4592917F29E74C1600D308DC /* UserConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592917E29E74C1600D308DC /* UserConfigurationViewController.swift */; };
 		4592918129E74DCB00D308DC /* UserConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592918029E74DCB00D308DC /* UserConfigurationFactory.swift */; };
 		4592918329E74EB400D308DC /* UserConfigurationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592918229E74EB400D308DC /* UserConfigurationCoordinator.swift */; };
+		4592918529E75C0B00D308DC /* SettingsCoordinator+UserConfigurationCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592918429E75C0B00D308DC /* SettingsCoordinator+UserConfigurationCoordinatorDelegate.swift */; };
+		4592918829E75DC300D308DC /* NavigationImp+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592918729E75DC300D308DC /* NavigationImp+UINavigationControllerDelegate.swift */; };
+		4592918A29E75E0600D308DC /* NavigationImp+UIAdaptivePresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592918929E75E0600D308DC /* NavigationImp+UIAdaptivePresentationControllerDelegate.swift */; };
+		4592918C29E75E4800D308DC /* NavigationImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592918B29E75E4800D308DC /* NavigationImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,10 @@
 		4592917E29E74C1600D308DC /* UserConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationViewController.swift; sourceTree = "<group>"; };
 		4592918029E74DCB00D308DC /* UserConfigurationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationFactory.swift; sourceTree = "<group>"; };
 		4592918229E74EB400D308DC /* UserConfigurationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationCoordinator.swift; sourceTree = "<group>"; };
+		4592918429E75C0B00D308DC /* SettingsCoordinator+UserConfigurationCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsCoordinator+UserConfigurationCoordinatorDelegate.swift"; sourceTree = "<group>"; };
+		4592918729E75DC300D308DC /* NavigationImp+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationImp+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
+		4592918929E75E0600D308DC /* NavigationImp+UIAdaptivePresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationImp+UIAdaptivePresentationControllerDelegate.swift"; sourceTree = "<group>"; };
+		4592918B29E75E4800D308DC /* NavigationImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,9 +264,9 @@
 		4592910F29DB955A00D308DC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				4592918629E75D9E00D308DC /* Navigation */,
 				4592911029DB956100D308DC /* AppCoordinator */,
 				4592911129DB958600D308DC /* Coordinator.swift */,
-				4592917629DBFA5700D308DC /* Navigation.swift */,
 				4592917829DC001700D308DC /* ParentCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -366,6 +374,7 @@
 				4592914229DBB57700D308DC /* SettingsCoordinator.swift */,
 				4592914429DBB58200D308DC /* SettingsFactory.swift */,
 				4592914B29DBDBA400D308DC /* SettingsCoordinator+SettingsCoordinatorViewCoordinator.swift */,
+				4592918429E75C0B00D308DC /* SettingsCoordinator+UserConfigurationCoordinatorDelegate.swift */,
 			);
 			path = Composition;
 			sourceTree = "<group>";
@@ -553,6 +562,17 @@
 			path = Composition;
 			sourceTree = "<group>";
 		};
+		4592918629E75D9E00D308DC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4592917629DBFA5700D308DC /* Navigation.swift */,
+				4592918729E75DC300D308DC /* NavigationImp+UINavigationControllerDelegate.swift */,
+				4592918929E75E0600D308DC /* NavigationImp+UIAdaptivePresentationControllerDelegate.swift */,
+				4592918B29E75E4800D308DC /* NavigationImp.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -686,6 +706,7 @@
 				4592911D29DB972900D308DC /* AppDIContainer.swift in Sources */,
 				4592914529DBB58200D308DC /* SettingsFactory.swift in Sources */,
 				4592911429DB95B400D308DC /* AppCoordinator.swift in Sources */,
+				4592918529E75C0B00D308DC /* SettingsCoordinator+UserConfigurationCoordinatorDelegate.swift in Sources */,
 				4592917329DBF59200D308DC /* PostDetailFactory.swift in Sources */,
 				4592912E29DBAB3D00D308DC /* MainTabBarController.swift in Sources */,
 				4592912929DB9D4200D308DC /* LogInViewModel.swift in Sources */,
@@ -696,6 +717,8 @@
 				4592915329DBDD9600D308DC /* CommunitiesFactory.swift in Sources */,
 				4592916C29DBEFD500D308DC /* HomeFactory.swift in Sources */,
 				459290DB29DB94B600D308DC /* AppDelegate.swift in Sources */,
+				4592918A29E75E0600D308DC /* NavigationImp+UIAdaptivePresentationControllerDelegate.swift in Sources */,
+				4592918829E75DC300D308DC /* NavigationImp+UINavigationControllerDelegate.swift in Sources */,
 				4592915C29DBE5EF00D308DC /* MyPostsFactory.swift in Sources */,
 				4592917529DBF68000D308DC /* PostDetailCoordinator.swift in Sources */,
 				4592913029DBAB7000D308DC /* MainTabBarFactory.swift in Sources */,
@@ -708,6 +731,7 @@
 				459290DD29DB94B600D308DC /* SceneDelegate.swift in Sources */,
 				4592917F29E74C1600D308DC /* UserConfigurationViewController.swift in Sources */,
 				4592913229DBAC1B00D308DC /* MainTabBarCoordinator.swift in Sources */,
+				4592918C29E75E4800D308DC /* NavigationImp.swift in Sources */,
 				4592911229DB958600D308DC /* Coordinator.swift in Sources */,
 				4592914329DBB57700D308DC /* SettingsCoordinator.swift in Sources */,
 				4592911829DB963500D308DC /* AppFactory.swift in Sources */,

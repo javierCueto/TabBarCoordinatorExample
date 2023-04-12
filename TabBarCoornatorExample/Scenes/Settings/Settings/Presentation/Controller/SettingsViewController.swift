@@ -12,7 +12,6 @@ protocol SettingsViewControllerCoordinator: AnyObject {
 }
 
 final class SettingsViewController: UITableViewController {
-  // MARK: - Public properties
   
   // MARK: - Private properties
   private let viewModel: SettingsViewModel

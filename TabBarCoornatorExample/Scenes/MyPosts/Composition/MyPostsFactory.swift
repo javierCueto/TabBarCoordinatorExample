@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: - Use a protocol instead a concrete type
 struct MyPostsFactory: ItemTabBarFactory {
   func makeMyPostViewController(coordinator: MyPostsViewControllerCoordinator) -> UIViewController {
     let layout = UICollectionViewFlowLayout()

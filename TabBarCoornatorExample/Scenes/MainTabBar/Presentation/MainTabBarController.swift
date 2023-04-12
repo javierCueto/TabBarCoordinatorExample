@@ -9,10 +9,6 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController {
-  // MARK: - Public properties
-  
-  // MARK: - Private properties
-  
   // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,9 +19,4 @@ final class MainTabBarController: UITabBarController {
   private func configUserInterface() {
     view.backgroundColor = .systemBackground
   }
-  
-  // MARK: - Actions
-  
 }
-
-// MARK: - Extensions here

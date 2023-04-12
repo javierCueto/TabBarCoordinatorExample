@@ -22,6 +22,4 @@ final class CommunitiesCoordinator: Coordinator {
     navigation.navigationBar.prefersLargeTitles = true
     navigation.pushViewController(controller, animated: true)
   }
-  
-  
 }

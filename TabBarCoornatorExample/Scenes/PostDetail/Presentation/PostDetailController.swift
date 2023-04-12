@@ -13,7 +13,7 @@ protocol PostDetailControllerCoordinator: AnyObject {
   func didTapSourceButton()
 }
 
-
+//TODO: - Move all strings to a constant file
 final class PostDetailController: UIViewController {
   // MARK: - Public properties
   
@@ -37,7 +37,7 @@ final class PostDetailController: UIViewController {
   private let sourceButton: UIButton = {
     let button = UIButton(type: .system)
     var configuration = UIButton.Configuration.filled()
-    configuration.title = "Souce"
+    configuration.title = "Source"
     button.configuration = configuration
     return button
   }()
@@ -97,5 +97,3 @@ final class PostDetailController: UIViewController {
     sourceButton.addAction(sourceAction, for: .touchUpInside)
   }
 }
-
-// MARK: - Extensions here

@@ -11,9 +11,8 @@ protocol HomeViewControllerCoordinator: AnyObject {
   func didSelectPost(id: Int)
 }
 
+//TODO: - Move all strings to a constant file
 final class HomeViewController: UICollectionViewController {
-  // MARK: - Public properties
-  
   // MARK: - Private properties
   private weak var coordinator: HomeViewControllerCoordinator?
   
@@ -48,7 +47,6 @@ final class HomeViewController: UICollectionViewController {
 }
 
 // MARK: - Extensions here
-
 extension HomeViewController {
   override func collectionView(
     _ collectionView: UICollectionView,

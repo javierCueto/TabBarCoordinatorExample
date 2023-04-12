@@ -22,21 +22,15 @@ extension SettingsCoordinator: SettingsViewControllerCoordinator {
   }
   
   private func callUserConfigurationCoordinator() {
-    userConfigurationCoordinator = factory.makeUserConfigurationCoordinator(delegate: self)
-    userConfigurationCoordinator?.start()
-    guard let userConfigurationCoordinator = userConfigurationCoordinator else { return }
+    let userConfigurationCoordinator = factory.makeUserConfigurationCoordinator(delegate: self)
+    addChildCoordinatorStar(userConfigurationCoordinator)
+    
     navigation.present(
       userConfigurationCoordinator.navigation.rootViewController,
       animated: true)
+    
     userConfigurationCoordinator.navigation.dismissNavigation = { [weak self] in
-      self?.userConfigurationCoordinator = nil
+      self?.removeChildCoordinator(userConfigurationCoordinator)
     }
-  }
-}
-
-extension SettingsCoordinator: UserConfigurationCoordinatorDelegate {
-  func didFinish() {
-    userConfigurationCoordinator = nil
-    navigation.dismiss(animated: true)
   }
 }

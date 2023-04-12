@@ -9,8 +9,7 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
   var navigation: Navigation
-  private var loginCoordinator: Coordinator?
-  private var mainTabBarCoordinator: Coordinator?
+  var childCoordinators: [Coordinator] = []
   var window: UIWindow?
   var factory: AppFactory?
   var auth: SessionCheckerAuth?
@@ -38,31 +37,37 @@ final class AppCoordinator: Coordinator {
   }
   
   private func startLoginCoordinator() {
-    loginCoordinator = factory?.makeLogInCoordinator(navigation: navigation, delegate: self)
-    loginCoordinator?.start()
+    let loginCoordinator = factory?.makeLogInCoordinator(navigation: navigation, delegate: self)
+    addChildCoordinatorStar(loginCoordinator)
   }
   
   private func startMainTabBarCoordinator() {
-    mainTabBarCoordinator = factory?.makeMainTabBarCoordinator(
+    let mainTabBarCoordinator = factory?.makeMainTabBarCoordinator(
       navigation: navigation,
       delegate: self)
-    mainTabBarCoordinator?.start()
+    addChildCoordinatorStar(mainTabBarCoordinator)
   }
   
+  // MARK: - Private helpers
+  private func clearCoordinatorsAndStart() {
+    navigation.viewControllers = []
+    clearAllChildsCoordinator()
+    startSomeCoordinator()
+  }
 }
 
+// MARK: - LogInCoordinatorDelegate
 extension AppCoordinator: LogInCoordinatorDelegate {
   func didFinishLogin() {
-    navigation.viewControllers = []
-    loginCoordinator = nil
-    startSomeCoordinator()
+    clearCoordinatorsAndStart()
   }
 }
 
+// MARK: - MainTabBarCoordinatorDelegate
 extension AppCoordinator: MainTabBarCoordinatorDelegate {
   func didFinish() {
-    navigation.viewControllers = []
-    mainTabBarCoordinator = nil
-    startSomeCoordinator()
+    clearCoordinatorsAndStart()
   }
 }
+
+extension AppCoordinator: ParentCoordinator { }

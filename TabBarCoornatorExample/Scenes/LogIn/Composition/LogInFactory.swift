@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: - Use a protocol instead a concrete type
 struct LogInFactory {
   let appDIContainer: AppDIContainer?
   

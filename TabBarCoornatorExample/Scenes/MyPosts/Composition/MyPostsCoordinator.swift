@@ -31,6 +31,7 @@ final class MyPostsCoordinator: Coordinator {
   }
 }
 
+//TODO: - Move protocol implementations to another file
 extension MyPostsCoordinator: MyPostsViewControllerCoordinator {
   func didSelectPost(id: Int) {
     let postDetailCoordinator = factory.makePostDetailCoordinator(navigation: navigation, id: id, parentCoordinator: self)
@@ -49,6 +50,5 @@ extension MyPostsCoordinator: NewPostViewControllerCoordinator {
     mediator.updateController(title: title, navigation: navigation)
   }
 }
-
 
 extension MyPostsCoordinator: ParentCoordinator { }

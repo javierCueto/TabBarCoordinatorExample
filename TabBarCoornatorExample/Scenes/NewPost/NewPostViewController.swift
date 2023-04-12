@@ -62,6 +62,7 @@ final class NewPostViewController: UIViewController {
     savePostButton.addAction(actionSave, for: .touchUpInside)
   }
   
+  //TODO: - Move to a viewModel
   private func randomPost() -> String {
     "Post #\(Int.random(in: 0...999))"
   }

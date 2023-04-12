@@ -13,6 +13,7 @@ protocol HomeFactory {
   func makePostDetailCoordinator(navigation: Navigation, id: Int, parentCoordinator: ParentCoordinator) -> Coordinator 
 }
 
+//TODO: - Move all strings to a constant file
 struct HomeFactoryImp: HomeFactory {
   func makeHomeViewController(coordinator: HomeViewControllerCoordinator) -> UIViewController {
     let layout = UICollectionViewFlowLayout()
